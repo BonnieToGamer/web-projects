@@ -1,0 +1,8 @@
+.sidebar {
+    float: left;
+    min-width: 50%;
+}
+
+.img {
+    background-image: url("images/house.gif");
+}

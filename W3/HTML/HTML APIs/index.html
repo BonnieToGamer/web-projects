@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>APIs</title>
+</head>
+
+<body>
+  <p>Click the button to get your coordinates.</p>
+  <button onclick="getLocation()">Try it</button>
+  <p id="demo"></p>
+
+  <script>
+    var x = document.getElementById("demo");
+
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition, showError);
+      } else {
+        x.InnerHTML = "GeoLocation is not supported by this browser.";
+      }
+    }
+
+    function showPosition(position) {
+      x.innerHTML = "Latitude: " + position.coords.latitude +
+        "<br>Longitude: " + position.coords.longitude + "<br>Accuract: " + position.coords.accuracy;
+    }
+
+    function showError(error) {
+      switch (error.code) {
+        case error.PERMISSION_DENIED:
+          x.innerHTML = "User denied the request for Geolocation."
+          break;
+        case error.POSITION_UNAVAILABLE:
+          x.innerHTML = "Location information is unavailable."
+          break;
+        case error.TIMEOUT:
+          x.innerHTML = "The request to get user location timed out."
+          break;
+        case error.UNKNOWN_ERROR:
+          x.innerHTML = "An unknown error occurred."
+          break;
+      }
+    }
+  </script>
+
+  <hr>
+
+  <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"
+    style="width: 350px; height:70px;padding:10px;border:1px solid #aaaaaa;"></div>
+  <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"
+    style="width: 350px; height:70px;padding:10px;border:1px solid #aaaaaa;"></div>
+
+  <img src="https://w3schools.com/html/img_logo.gif" alt="W3schools logo" id="drag1" draggable="true"
+    ondragstart="drag(event)" width="336" height="69">
+
+  <script>
+    function allowDrop(ev) {
+      ev.preventDefault();
+    }
+
+    function drag(ev) {
+      ev.dataTransfer.setData("text", ev.target.id);
+    }
+
+    function drop(ev) {
+      ev.preventDefault();
+      var data = ev.dataTransfer.getData("text");
+      ev.target.appendChild(document.getElementById(data));
+    }
+  </script>
+
+  <p id="result">Sample Data</p>
+  <form id="formName" onsubmit="return false">
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname"><br>
+    <input type="submit" value="Submit!" onclick="storeData()">
+  </form>
+  <br><br>
+  <button onclick="getData()">Get Data!</button>
+
+  <script>
+    function storeData() {
+      var form = document.getElementById("formName");
+      sessionStorage.setItem("fname", form.elements["fname"].value);
+      sessionStorage.setItem("lname", form.elements["lname"].value);
+
+      return false;
+    }
+
+    function getData() {
+      document.getElementById("result").innerHTML = "Name: " + sessionStorage.fname + " " + sessionStorage.lname;
+    }
+  </script>
+
+  <p>Count numbers: <output id="res"></output></p>
+  <button onclick="startWorker()">Start Worker</button>
+  <button onclick="stopWorker()">Stop Worker</button>
+
+  <script>
+    var w;
+
+    function startWorker() {
+      if (typeof (Worker) !== "undefined") {
+        if (typeof (w) == "undefined") {
+          w = new Worker("demo_workers.js");
+        }
+        w.onmessage = function (event) {
+          document.getElementById("res").innerHTML = event.data;
+        };
+      } else {
+        document.getElementById("res").innerHTML = "Sorry! No Web Worker support.";
+      }
+    }
+
+    function stopWorker() {
+      w.terminate();
+      w = undefined;
+    }
+  </script>
+
+</body>
+
+</html>

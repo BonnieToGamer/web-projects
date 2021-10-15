@@ -1,0 +1,31 @@
+Windows Registry Editor Version 5.00
+
+; Icons
+
+; Remove and add correct html Icon
+[HKEY_CLASSES_ROOT\BraveHTML\DefaultIcon]
+@="C:\\ICONS\\html.ico,0"
+
+; Remove and add correct css Icon
+[HKEY_CLASSES_ROOT\CSSfile\DefaultIcon]
+@="C:\\ICONS\\css.ico,0"
+
+; Remove and add correct js Icon
+[HKEY_CLASSES_ROOT\JSFile\DefaultIcon]
+@="C:\\ICONS\\js.ico,0"
+
+
+; Files
+
+; Add html to context menu
+[HKEY_CLASSES_ROOT\.html\ShellNew]
+"NullFile"="1"
+
+; Add css to context menu
+[HKEY_CLASSES_ROOT\.css\ShellNew]
+"NullFile"="1"
+
+; Add js to context menu
+[HKEY_CLASSES_ROOT\.js\ShellNew]
+"NullFile"="1"
+
