@@ -24,15 +24,22 @@ div.cover {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -300%);
+  transform: translate(-50%, -225%);
   color: white;
 
-  font-size: 50%;
+  font-size: 300%;
   font-family: 'Raleway', sans-serif;
 }
 
 @media only screen and (min-width: 960px) {
   .centered {
     font-size: 500%;
+    transform: translate(-50%, -300%);
+  }
+}
+
+@media only screen and (orientaion: landscape) and (min-width: 600px) {
+  .centered {
+    transform: translate(-50%, -275%);
   }
 }
