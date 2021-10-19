@@ -5,7 +5,7 @@
 }
 
 .cover {
-  width: 100%;
+  width: auto;
   height: 100vh;
 }
 
@@ -24,22 +24,38 @@ div.cover {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -225%);
+  transform: translate(-50%, -300%);
   color: white;
 
-  font-size: 300%;
+  font-size: 500%;
   font-family: 'Raleway', sans-serif;
 }
 
-@media only screen and (min-width: 960px) {
-  .centered {
-    font-size: 500%;
-    transform: translate(-50%, -300%);
-  }
+.nav-bar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: sticky;
+  top: 0;
+  display: block;
+  background-color: black;
 }
 
-@media only screen and (orientaion: landscape) and (min-width: 600px) {
-  .centered {
-    transform: translate(-50%, -275%);
-  }
+.nav-item {
+  float: left;
+}
+
+.nav-item:last-child {
+  float: right;
+}
+
+.nav-url {
+  display: block;
+  background-color: #ddd;
+  text-decoration: none;
+  border: 1px solid #333;
+}
+
+.nav-url:visited {
+  color: black;
 }
