@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript 1</title>
+</head>
+
+<body style="background-color: rgb(238, 238, 238);">
+
+  <script type="text/javascript" src="http://koda.nu/simple.js">
+    var axiom = "F";
+
+    var rules = {
+      "F": "G-F-G",
+      "G": "F+G+F",
+      "+": "+",
+      "-": "-"
+    };
+
+    var actions = {
+      'F': function () {
+        turtle.moveWithPen(length);
+      },
+      'G': function () {
+        turtle.moveWithPen(length);
+      },
+      '+': function () {
+        turtle.turnLeft(angle);
+      },
+      '-': function () {
+        turtle.turnRight(angle);
+      }
+    }
+
+    var iterations = 11;
+    var angle = 60;
+    var length = 0.5;
+
+    var system = axiom;
+
+    for (var i = 0; i < iterations; i++) {
+      var currentLength = system.length;
+      var newSystem = "";
+
+      for (let u = 0; u < currentLength; u++) {
+        var action = rules[system[u]];
+        newSystem = newSystem + action;
+      }
+
+      system = newSystem;
+    }
+
+    for (let i = 0; i < system.length; i++) {
+      var action = actions[system[i]];
+      action();
+    }
+  </script>
+
+</body>
+
+</html>

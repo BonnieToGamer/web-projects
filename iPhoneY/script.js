@@ -13,7 +13,7 @@ var gallImg1 = document.getElementById("gallImg1");
 var gallImg2 = document.getElementById("gallImg2");
 var gallImg3 = document.getElementById("gallImg3");
 
-function galleryRight(obj) {
+function galleryLeft(obj) {
     obj.disabled = true;
     image1++;
     image2++;
@@ -34,7 +34,7 @@ function galleryRight(obj) {
     obj.disabled = false;
 }
 
-function galleryLeft(obj) {
+function galleryRight(obj) {
     obj.disabled = true;
 
     image1--;

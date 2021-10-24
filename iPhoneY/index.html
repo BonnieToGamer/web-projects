@@ -6,38 +6,41 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>New iPhoneY!</title>
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
 </head>
 
 <body>
+
+  <!-- Temp line to check center -->
+  <!-- <div class="line"></div> -->
+
+  <!-- Parallax background with text -->
   <div class="cover parallax">
     <p class="centered">New iPhoneY</p>
   </div>
 
 
-  <div class="nav-bar">
-    <ul class="nav-bar">
-      <li class="nav-item"><a href="">Home</a></li>
-      <li class="nav-item"><a href="">Contact</a></li>
-      <li class="nav-item"><a href="">About</a></li>
-    </ul>
-  </div>
+  <!-- Nav bar -->
+  <ul class="nav-bar">
+    <li class="nav-item"><a href="">Home</a></li>
+    <li class="nav-item"><a href="">Contact</a></li>
+    <li class="nav-item"><a href="">About</a></li>
+  </ul>
 
-  <div class="gallery">
-    <figure class="gallery-item gallery-item--1">
-      <img src="images/phone1.jpg" alt="Image 1" class="gallery-img" id="gallImg1">
-    </figure>
-    <figure class="gallery-item gallery-item--2">
-      <img src="images/phone2.jpg" alt="Image 2" class="gallery-img" id="gallImg2">
-    </figure>
-    <figure class="gallery-item gallery-item--3">
-      <img src="images/phone3.jpg" alt="Image 3" class="gallery-img" id="gallImg3">
-    </figure>
-    <button class="gallery-item gallery-btn-left gallery-btn" onclick="galleryLeft(this)">&#60;</button>
-    <button class="gallery-item gallery-btn-right gallery-btn" onclick="galleryRight(this)">&#62;</button>
+  <!-- Gallery -->
+  <div class="row">
+    <button class="col-btn" onclick="galleryLeft(this)">&#60;</button>
+    <figure class="column"><img src="images/phone1.jpg" alt="Image 1" id="gallImg1"></figure>
+    <figure class="column"><img src="images/phone2.jpg" alt="Image 2" id="gallImg2"></figure>
+    <figure class="column"><img src="images/phone3.jpg" alt="Image 3" id="gallImg3"></figure>
+    <button class="col-btn" onclick="galleryRight(this)">&#62;</button>
   </div>
 
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam eveniet maiores placeat unde hic aliquid quas
