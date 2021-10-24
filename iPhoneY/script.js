@@ -6,7 +6,7 @@ var images = [
 
 var captions = [
     "All new 1mp lens", "New 1mp camera with horrible zoom", "3 Cameras for even better photos",
-    "A completley new display with vibrant colors", "Brand new matt black color", "Can not give the same quality as a DSLR camera"
+    "A completley new display with vibrant colors", "Brand new Lunar Solstice color", "Can not give the same quality as a DSLR camera"
 ]
 
 // Default images

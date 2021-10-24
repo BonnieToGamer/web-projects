@@ -19,24 +19,24 @@
 .cover {
   width: auto;
   height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 div.cover {
-  background-image: url(images/phone1.jpg);
+  background-image: url(images/phone4.jpg);
 }
 
 .parallax {
   background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .centered {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -30vh);
+  transform: translate(-50%, -40vh);
   color: white;
   font-size: 500%;
   font-family: 'Raleway', sans-serif;
@@ -48,12 +48,21 @@ div.cover {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  height: 2rem;
   overflow: hidden;
-  background-color: rgb(68, 68, 68);
+  background-color: black;
   position: sticky;
   top: 0;
   width: 100%;
+  z-index: 10;
+}
+
+.nav-bar::before {
+  content: " ";
+  display: table;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-column-end: 2;
+  grid-row-end: 2;
 }
 
 .nav-item {
@@ -158,4 +167,23 @@ figcaption {
   padding: 3px;
   text-align: center;
   border-radius: 1rem;
+}
+
+/* Reviews */
+
+.reviews {
+  background-color: rgb(15, 15, 15);
+}
+
+.review {
+  padding: 2.5% 0;
+  text-align: center;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.star {
+  width: 100%;
+
+  color: white;
 }
