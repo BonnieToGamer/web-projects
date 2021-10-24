@@ -17,55 +17,88 @@
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
   <!-- Quicksand -->
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
-
-
+  <!-- Zen Kaku Gothic Antique -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Zen+Kaku+Gothic+Antique:wght@300&display=swap"
+    rel="stylesheet">
   <!-- Icons -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
 <body>
-
-  <!-- Temp line to check center -->
-  <!-- <div class="line"></div> -->
-
   <!-- Nav bar -->
   <ul class="nav-bar">
-    <img src="images/logo-full.png" alt="logo" style="width: 35pt; float:left; margin: 5pt 5pt;">
-    <li class="nav-item"><a class="material-icons" href="">home</a></li>
-    <li class="nav-item"><a class="material-icons" href="">contact_page</a></li>
+    <img src="images/logo-full.png" alt="logo" style="width: 35pt; float:left; margin: 0 5pt; margin-top: 5pt;">
     <li class="nav-item"><a class="material-icons" href="html/about.html">info</a></li>
   </ul>
 
-  <!-- Parallax background with text -->
-  <div class="cover parallax">
-    <p class="centered">New i-Phoney 24 Max Pro Plus 5G Fold</p>
-  </div>
+  <main>
+    <!-- Parallax background with text -->
+    <div class="cover parallax">
+      <p class="centered">New i-Phoney 24 Max Pro Plus 5G Fold</p>
+      <p class="center-bottom">Starting at $9,999</p>
+    </div>
 
-  <!-- Gallery -->
-  <div class="row">
-    <button class="col-btn" onclick="galleryLeft(this)">&#60;</button>
-    <figure class="column"><img src="images/phone1.jpg" alt="Image 1" id="gallImg1"></figure>
-    <figure class="column"><img src="images/phone2.jpg" alt="Image 2" id="gallImg2">
-      <figcaption id="caption">A completley new display with vibrant colors</figcaption>
-    </figure>
-    <figure class="column"><img src="images/phone3.jpg" alt="Image 3" id="gallImg3"></figure>
-    <button class="col-btn" onclick="galleryRight(this)">&#62;</button>
-  </div>
+    <!-- Gallery -->
+    <div class="row">
+      <button class="col-btn box-shadow" onclick="galleryLeft(this)">&#60;</button>
+      <figure class="column"><img class="box-shadow" src="images/phone1.jpg" alt="Image 1" id="gallImg1"></figure>
+      <figure class="column"><img class="box-shadow" src="images/phone2.jpg" alt="Image 2" id="gallImg2">
+        <figcaption class="box-shadow" id="caption">A completley new display with vibrant colors</figcaption>
+      </figure>
+      <figure class="column"><img class="box-shadow" src="images/phone3.jpg" alt="Image 3" id="gallImg3"></figure>
+      <button class="col-btn box-shadow" onclick="galleryRight(this)">&#62;</button>
+    </div>
 
-  <div class="reviews">
-    <h1 class="review">
-      "Genuinely Disgusting"
-      <p class="star material-icons">star_half star_border star_border star_border star_border</p>
-    </h1>
-    <h1 class="review">
-      "Almost offensive"
-      <p class="star material-icons">star_half star_border star_border star_border star_border</p>
-    </h1>
-    <h1 class="review">
-      "This is just a re-release of the previous phone"
-      <p class="star material-icons">star_half star_border star_border star_border star_border</p>
-    </h1>
-  </div>
+    <div class="reviews">
+      <h1 class="review">
+        "Genuinely Disgusting" - The Middle
+        <p class="star material-icons">star_half star_border star_border star_border star_border</p>
+      </h1>
+      <h1 class="review">
+        "Almost offensive" - Hobby Outsider
+        <p class="star material-icons">star_half star_border star_border star_border star_border</p>
+      </h1>
+      <h1 class="review">
+        "This is just a re-release of the previous phone" - Literature Student
+        <p class="star material-icons">star_half star_border star_border star_border star_border</p>
+      </h1>
+    </div>
+
+    <!-- Colors -->
+    <div class="colors">
+      <h1 class="color-text">With 3 Beutiful finnishes</h1>
+      <div class="color-gallery">
+        <figure><img src="images/phone5.png" alt="backside of phone" class="photo">
+          <figcaption class="box-shadow">Solar Eclipse</figcaption>
+        </figure>
+        <figure><img src="images/phone5.png" alt="backside of phone" class="photo">
+          <figcaption class="box-shadow">Lunar Solstice</figcaption>
+        </figure>
+        <figure><img src="images/phone5.png" alt="backside of phone" class="photo">
+          <figcaption class="box-shadow">Ashen Volcano</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <!-- Specs -->
+    <div class="specs">
+      <h1 class="spec">Up to 4% faster</h1>
+      <h1 class="spec">128GB Storage</h1>
+    </div>
+
+    <!-- Buy Now -->
+    <div class="buy-now">
+      <h1 class="buy-text">Intrested?</h1>
+      <button>Buy now!</button>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer">
+      <img src="images/logo-full.png" alt="full logo">
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
