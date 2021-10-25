@@ -62,6 +62,7 @@ function galleryLeft(obj) {
     obj.disabled = false;
 }
 
+// Change the images on the gallery
 function changeImg() {
     gallImg1.src = `images/${images[image1]}.jpg`;
     gallImg2.src = `images/${images[image2]}.jpg`;
