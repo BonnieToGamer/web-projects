@@ -233,6 +233,7 @@ figcaption {
     sans-serif;
   text-align: center;
   margin: 10pt 0;
+  float: center;
 }
 
 /* Buy now */
