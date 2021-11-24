@@ -1,9 +1,17 @@
 var input = document.getElementById('input');
 var output = document.getElementById('output');
+var outputText = document.getElementById()
 
 var div = document.getElementById('div');
 
-var tbfBtn = document.getElementById('FBF');
+div.addEventListener('click', (e) => {
+  if (e.target.nodeName === 'BUTTON') {
+    console.log("test");
+    let loader = document.createElement('div');
+    loader.className += " loader"
+    output.parentNode.insertBefore(loader, output);
+  }
+});
 
 // Brainfuck operators
 const bfChars = [
