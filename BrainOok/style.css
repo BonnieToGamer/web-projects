@@ -1,0 +1,15 @@
+html,body {
+  height:100%;
+  width:100%;
+  margin:0;
+}
+
+body {
+  display:flex;
+}
+
+div {
+  margin: auto;
+  margin-bottom: 30%;
+  text-align: center;
+}

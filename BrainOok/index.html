@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BrainOok</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="div">
+    <form onsubmit="return false">
+      <h2>Input</h2>
+      <textarea id="input" cols="80" rows="10"></textarea>
+      <br>
+      <button id="FBF" onclick="memory.splice(0, memory.length); output.value = ''; return fromBrainFuck()">From Brainfuck</button>
+      <button id="FOK" onclick="memory.splice(0, memory.length); output.value = '';return fromOok()">From Ook!</button>
+    </form>
+    
+    <h2>Output</h2>
+    <textarea id="output" cols="80" rows="10"></textarea>
+    <br>
+    <a href="https://gist.github.com/roachhd/dce54bec8ba55fb17d3a">Brainfuck tutorial</a>
+    <a href="https://esolangs.org/wiki/Ook!">Ook! Tutorial</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
