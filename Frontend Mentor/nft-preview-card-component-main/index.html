@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <title>Frontend Mentor | NFT preview card component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+        .attribution {
+            font-size: 22px;
+            text-align: center;
+        }
+        
+        .attribution a {
+            color: hsl(229, 63%, 75%);
+            text-decoration: none;
+        }
+        
+        .attribution a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="nft center">
+        <div class="nft-container">
+
+            <!-- big image -->
+            <div class="thumbnail-container">
+                <img class="thumbnail" src="./images/image-equilibrium.jpg" alt="Equilibrium">
+                <div class="overlay"><img src="./images/icon-view.svg" alt="view"></div>
+            </div>
+
+            <!-- title -->
+            <h1 class="title hoverable">
+                Equilibrium #3429
+            </h1>
+            <p class="desc">
+                Our Equilibrium collection promotes balance and calm.
+            </p>
+
+            <!-- time and value -->
+            <div class="info">
+                <div class="cost">
+                    <img src="./images/icon-ethereum.svg" alt="ethereum">
+                    <p>0.041 ETH</p>
+                </div>
+                <div class="time">
+                    <p>3 days left</p>
+                    <img src="./images/icon-clock.svg" alt="clock">
+                </div>
+            </div>
+
+            <!-- line -->
+            <hr color="#2f415b">
+
+            <!-- user info -->
+            <div class="user">
+                <img src="./images/image-avatar.png" alt="avatar">
+                <p class="desc">
+                    Creation of <a class="hoverable" href="#">Jules Wyvern</a>
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://github.com/bonnietogamer">BonnieToGamer</a>.
+    </div>
+</body>
+
+</html>
