@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500&display=swap');
+:root {
+    --paleBlue: hsl(255, 100%, 94%);
+    --brightBlue: hsl(245, 75%, 52%);
+    --veryPaleBlue: hsl(255, 100%, 98%);
+    --dsBlue: hsl(224, 23%, 55%);
+    --darkBlue: hsl(223, 47%, 23%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--veryPaleBlue);
+    background-image: url(./images/pattern-background-mobile.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 16px;
+}
+
+@media screen and (min-width: 992px) {
+    body {
+        background-image: url(./images/pattern-background-desktop.svg);
+    }
+}
+
+.center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.summary-card {
+    border-radius: 1em;
+    background: white;
+    width: 25rem;
+    height: 42rem;
+}
+
+.banner img {
+    border-radius: 1em 1em 0 0;
+    width: 100%;
+    height: 100%;
+}
+
+.title {
+    text-align: center;
+    font-weight: 900;
+    font-size: 1.75em;
+    padding: 1em 0;
+}
+
+.desc {
+    text-align: center;
+    padding: 0 2em .5em 2em;
+    font-weight: 500;
+    color: grey;
+}
+
+.plan {
+    display: grid;
+    place-items: center;
+    justify-content: space-around;
+    background: var(--veryPaleBlue);
+    margin: 2em 2em;
+    padding: .5em 1em;
+    border-radius: 1rem;
+    height: 5em;
+}
+
+.music-icon {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.plan-title {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    font-weight: 900;
+    margin-bottom: 1em;
+}
+
+.plan-desc {
+    margin-top: .25em;
+    font-weight: 500;
+    color: grey;
+}
+
+.plan-change {
+    grid-column-start: 5;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.plan-change a {
+    font-weight: 700;
+}
+
+.plan-change a:hover {
+    color: var(--brightBlue)
+}
+
+.pay-button {
+    margin: 2em 2em;
+    margin-bottom: .5em;
+}
+
+.pay-button button {
+    width: 100%;
+    height: 3.5em;
+    background-color: var(--brightBlue);
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    font-weight: 900;
+}
+
+.pay-button button:hover {
+    background-color: var(--paleBlue);
+}
+
+.cancel button {
+    width: 100%;
+    height: 3.5em;
+    background-color: white;
+    color: var(--dsBlue);
+    border: none;
+    border-radius: 1rem;
+    font-weight: 900;
+}
+
+.cancel button:hover {
+    color: black;
+}
