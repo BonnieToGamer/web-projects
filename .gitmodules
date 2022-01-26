@@ -1,3 +1,6 @@
 [submodule "MultiCraft"]
 	path = MultiCraft
 	url = https://github.com/BonnieToGamer/MultiCraft.git
+[submodule "threejs-webpack-typescript-starter"]
+	path = threejs-webpack-typescript-starter
+	url = https://github.com/BonnieToGamer/threejs-webpack-typescript-starter
