@@ -4,3 +4,6 @@
 [submodule "threejs-webpack-typescript-starter"]
 	path = threejs-webpack-typescript-starter
 	url = https://github.com/BonnieToGamer/threejs-webpack-typescript-starter
+[submodule "typescript-webpack-starter"]
+	path = typescript-webpack-starter
+	url = https://github.com/BonnieToGamer/typescript-webpack-starter
