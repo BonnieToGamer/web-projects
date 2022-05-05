@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    --light-text: 100;
+    --big-text: 600;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.max-height {
+    height: 100vh;
+}
+
+.title {
+    font-weight: var(--big-text);
+}
+
+.desc {
+    font-weight: var(--light-text);
+}
