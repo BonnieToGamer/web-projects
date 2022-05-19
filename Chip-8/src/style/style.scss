@@ -1,0 +1,21 @@
+$main-color: #2f2e41;
+h1 {
+    color: $main-color;
+}
+
+#drop-zone {
+    background-color: change-color($main-color, $alpha: 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    p {
+        padding: 10rem;
+        color: $main-color;
+        background-color: transparent;
+    }
+}
+
+input[type="file"] {
+    display: none;
+}
