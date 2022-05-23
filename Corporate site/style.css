@@ -22,7 +22,7 @@ html {
 }
 
 
-/* FRONT */
+/* NAV */
 
 nav {
     overflow: hidden;
@@ -37,7 +37,7 @@ nav {
 nav.sticky {
     padding: .5rem 8rem;
     margin: 0 8rem;
-    border-radius: 0 0 5rem 5rem;
+    border-radius: 0 0 2.5rem 2.5rem;
     box-shadow: 0 0 60px 0 rgb(0 0 0 / 15%);
     background-color: white;
 }
@@ -62,6 +62,9 @@ nav a:hover {
 .right {
     float: right;
 }
+
+
+/* LANDING */
 
 #title {
     display: inline;
@@ -210,13 +213,14 @@ nav a:hover {
 
 .card>p {
     font-family: sans-serif;
+    font-size: 1.25em;
 }
 
 .reveal {
     position: relative;
     transform: translateY(150px);
     opacity: 0;
-    transition: 1s all ease;
+    transition: 0.6s all ease;
 }
 
 .reveal.active {
