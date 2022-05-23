@@ -1,0 +1,6 @@
+{
+  "type": "module",
+  "dependencies": {
+    "arcsecond": "^4.1.0"
+  }
+}

@@ -1,8 +1,8 @@
-const readline = require('readline')
+import readline from 'readline';
 
-const createMemory = require('./create-memory');
-const CPU = require('./cpu');
-const instructions = require('./instructions');
+import createMemory from './create-memory.js';
+import CPU from './cpu.js'
+import instructions from './instructions.js';
 
 const IP = 0;
 const ACC = 1;

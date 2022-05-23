@@ -1,4 +1,4 @@
-module.exports = {
+const instructions = {
     MOV_LIT_REG:        0x10,
     MOV_REG_REG:        0x11,
     MOV_REG_MEM:        0x12,
@@ -49,3 +49,5 @@ module.exports = {
     CAL_REG:            0x5F,
     RET:                0x60
 }
+
+export default instructions;
