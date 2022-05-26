@@ -14,5 +14,6 @@ export default {
 	bracketedExpression : asType('BRACKETED_EXPRESSION'),
 	squareBracketExpression : asType('SQUARE_BRACKET_EXPRESSION'),
 
-	instruction : asType('INSTRUCTION')
+	instruction : asType('INSTRUCTION'),
+	label: asType('LABEL')
 };

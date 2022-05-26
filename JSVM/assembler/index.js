@@ -20,36 +20,73 @@ const registerMap = {
 };
 
 const exampleProgram = [
-	'mov $4200, r1',
-	'mov r1, &0060',
-	'mov $1300, r1',
-	'mov &0060, r2',
-	'add r1, r2'
+	'start:',
+	'  mov $0A, &0050',
+	'loop:',
+	'  mov &0050, acc',
+	'  dec acc',
+	'  mov acc, &0050',
+	'  inc r2',
+	'  inc r2',
+	'  inc r2',
+	'  jne $00, &[!loop]',
+	'end:',
+	'  hlt',
 ].join('\n');
 
 const parsedOutput = parser.run(exampleProgram);
 
 const machineCode = [];
+const labels = {};
+let currentAddress = 0;
+
+parsedOutput.result.forEach(instructionOrLabel => {
+	if (instructionOrLabel.type === 'LABEL') {
+		labels[instructionOrLabel.value] = currentAddress;
+	} else {
+		const metadata = instructions[instructionOrLabel.value.instruction];
+		currentAddress += metadata.size;
+	}
+});
 
 const encodeLitOrMem = lit => {
-	const hexVal = parseInt(lit.value, 16);
-	const hightByte = (hexVal & 0xff00) >> 8;
+	let hexVal;
+	if (lit.type === 'VARIABLE') {
+		if (!(lit.value in labels)) {
+		  throw new Error(`label "${lit.value}" wasn't resolved.`);
+		}
+		hexVal = labels[lit.value];
+	  } else {
+		hexVal = parseInt(lit.value, 16);
+	  }
+
+	const highByte = (hexVal & 0xff00) >> 8;
 	const lowByte = hexVal & 0x00ff;
-	machineCode.push(hightByte, lowByte);
+	machineCode.push(highByte, lowByte);
 };
 
 const encodeLit8 = lit => {
-	const hexVal = paseInt(lit.value, 16);
-	const lowByte = hexVal & 0x00ff;
+	let hexVal;
+	if (lit.type === 'VARIABLE') {
+		hexVal = labels[lit.value];
+	  } else {
+		hexVal = parseInt(lit.value, 16);
+	  }
+
+	const lowByte = hexVal & 0xff;
 	machineCode.push(lowByte);
 };
 
 const encodeReg = reg => {
-	const mappedReg = register[reg.value];
+	const mappedReg = registerMap[reg.value];
 	machineCode.push(mappedReg);
 };
 
 parsedOutput.result.forEach(instruction => {
+	if (instruction.type !== 'INSTRUCTION') {
+		return;
+	}
+
 	const metadata = instructions[instruction.value.instruction];
 	machineCode.push(metadata.opcode);
 
